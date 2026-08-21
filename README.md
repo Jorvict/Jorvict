@@ -10,8 +10,8 @@
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=duskfox)](https://git.io/streak-stats)
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=sakura-x)](https://git.io/streak-stats)
 
-[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=&theme=kanagawa-paper&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
-[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=&theme=dracula&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=kanagawa-paper&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=dracula&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
 
 
 
