@@ -13,15 +13,24 @@ automatización de procesos e integración de sistemas empresariales.
 y arquitectura de software.
 
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](TU_LINKEDIN)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:TU_EMAIL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jorvict-pina/)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:jorvict.pina@outlook.com)
 [![GitHub](https://img.shields.io/github/followers/Jorvict?style=for-the-badge&logo=github)](https://github.com/Jorvict)
 
 
 ## GitHub Stats
-[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)
-[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)
+<p align="center">
+  <img src="TU_STATS" height="180"/> [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)
+  <img src="TU_TOP_LANGS" height="180"/> [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)
+</p>
+
+<p align="center">
+  <img src="TU_STREAK" /> 
+  [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+</p>
+
+
+
 
 
 
