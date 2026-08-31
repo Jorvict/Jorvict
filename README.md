@@ -1,8 +1,12 @@
 ## Hi there 👋
 
+[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+
+<!--
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=dracula)](https://git.io/streak-stats)
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=buefy-dark)](https://git.io/streak-stats)
-[![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight)](https://git.io/streak-stats)
+
+
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-jolly)](https://git.io/streak-stats)
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=modern-lilac2)](https://git.io/streak-stats)
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=ocean-dark)](https://git.io/streak-stats)
@@ -12,6 +16,7 @@
 
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=kanagawa-paper&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=dracula&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+-->
 
 
 
