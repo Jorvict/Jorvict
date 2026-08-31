@@ -1,6 +1,7 @@
 ## Hi there 👋
 
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)
 
 <!--
 [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=dracula)](https://git.io/streak-stats)
