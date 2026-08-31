@@ -52,37 +52,32 @@ y arquitectura de software.
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-
-<!-- Stats -->
+<!-- GitHub Stats -->
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img 
-    src="https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight" 
-    height="180"
-  />
-  
-  <img 
-    src="https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight" 
-    height="180"
-  />
-</p>
+<table>
+  <tr>
+    <td>
+      <img 
+        src="https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight"
+        width="400"
+      />
+    </td>
+    <td>
+      <img 
+        src="https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight"
+        width="400"
+      />
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img 
     src="https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat"
+    width="800"
   />
 </p>
-
-
-
-
-
-
-
-
-
-
 
 
 
