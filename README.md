@@ -1,3 +1,4 @@
+<!-- Presentación  -->
 # 👋 Hola, soy Jorvict
 
 ### Software Developer | Full Stack Developer
@@ -12,41 +13,23 @@ automatización de procesos e integración de sistemas empresariales.
 📚 Actualmente estoy fortaleciendo mis conocimientos en desarrollo web moderno
 y arquitectura de software.
 
-
+<!-- Contacto -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jorvict-pina/)
 [![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:jorvict.pina@outlook.com)
 [![GitHub](https://img.shields.io/github/followers/Jorvict?style=for-the-badge&logo=github)](https://github.com/Jorvict)
 
+<!-- Acerca de mi -->
+## 🚀 Sobre mí
 
-## GitHub Stats
-<p align="center">
-  <img src="TU_STATS" height="180"/> [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)
-  <img src="TU_TOP_LANGS" height="180"/> [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)](https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight)
-</p>
+- 💻 Desarrollador de software enfocado en el desarrollo de aplicaciones web.
+- 🔧 Experiencia trabajando con C#, ASP.NET, Laravel, Vue.js y SQL Server.
+- 🏢 Experiencia en el desarrollo de aplicaciones empresariales y automatización de procesos.
+- 🔗 Experiencia en integración de aplicaciones con SAP mediante Service Layer.
+- ☁️ Experiencia en despliegue de aplicaciones utilizando AWS EC2.
+- 📊 Experiencia trabajando con SQL Server, PostgreSQL y MySQL.
+- ⚡ Interesado en arquitectura de software, automatización y tecnologías web modernas.
 
-<p align="center">
-  <img src="TU_STREAK" /> 
-  [![GitHub Streak](https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat)](https://git.io/streak-stats)
-</p>
-
-
-
-
-
-
-## 🚀 About Me
-
-- 💻 Software Developer focused on web application development
-- 🔧 Experience with C#, ASP.NET, Laravel, Vue.js and SQL Server
-- 🏢 Experience developing enterprise applications and business process automation
-- 🔗 Experience integrating applications with SAP using Service Layer
-- ☁️ Experience deploying applications on AWS EC2
-- 📊 Experience working with SQL Server and MySQL
-- ⚡ Interested in software architecture, automation and modern web technologies
-
-
-
-
+<!-- Tecnologías -->
 ## 🛠️ Tech Stack
 
 ### Backend
@@ -68,6 +51,39 @@ y arquitectura de software.
 ### Cloud & Tools
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+
+<!-- Stats -->
+## 📊 GitHub Stats
+
+<p align="center">
+  <img 
+    src="https://github-stats-extended.vercel.app/api?username=Jorvict&rank_icon=github&custom_title=Mis%20estad%C3%ADsticas%20de%20GitHub&show_icons=true&include_all_commits=true&theme=material-palenight" 
+    height="180"
+  />
+  
+  <img 
+    src="https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight" 
+    height="180"
+  />
+</p>
+
+<p align="center">
+  <img 
+    src="https://streak-stats-deploy.vercel.app/?user=jorvict&theme=material-palenight&locale=es&exclude_days=Sun%2CSat"
+  />
+</p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
