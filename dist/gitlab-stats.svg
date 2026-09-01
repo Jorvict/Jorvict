@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="150" viewBox="0 0 495 150">
+  <style>
+    .bg { fill:#0d1117; }
+    .title { fill:#fc6d26; font: 600 16px 'Segoe UI', sans-serif; }
+    .num { fill:#ffffff; font: 700 28px 'Segoe UI', sans-serif; }
+    .label { fill:#8b949e; font: 400 12px 'Segoe UI', sans-serif; }
+  </style>
+  <rect class="bg" width="495" height="150" rx="10"/>
+  <text x="20" y="30" class="title">GitLab Stats</text>
+  <text x="65" y="80" class="num" text-anchor="middle">222</text>
+  <text x="65" y="100" class="label" text-anchor="middle">Total</text>
+  <text x="190" y="80" class="num" text-anchor="middle">1</text>
+  <text x="190" y="100" class="label" text-anchor="middle">Current Streak</text>
+  <text x="330" y="80" class="num" text-anchor="middle">5</text>
+  <text x="330" y="100" class="label" text-anchor="middle">Longest Streak</text>
+  <text x="455" y="80" class="num" text-anchor="middle">89</text>
+  <text x="455" y="100" class="label" text-anchor="middle">Active Days</text>
+</svg>
