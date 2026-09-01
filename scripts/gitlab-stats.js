@@ -119,7 +119,6 @@ function renderSVG(stats) {
 
   <circle cx="440" cy="108" r="34" fill="none" stroke="#bf8fff" stroke-width="4"/>
   <text x="440" y="118" class="streak-num" text-anchor="middle">${stats.current}</text>
-  <text x="415" y="150" text-anchor="middle" font-size="14">🔥</text>
   <text x="450" y="158" class="label" text-anchor="middle">Racha Actual</text>
 
   <line x1="563" y1="80" x2="563" y2="163" class="divider"/>
