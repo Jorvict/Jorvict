@@ -1,7 +1,7 @@
 ![Banner](./assets/banner.png)
 
 <!-- Presentación  -->
-# 👋 Hola, soy Jorvict
+# 👋 Hola, soy Jorvict Piña
 
 ### Software Developer | Full Stack Developer
 
