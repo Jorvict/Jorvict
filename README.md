@@ -81,7 +81,9 @@ y arquitectura de software.
   />
 </p>
 
-
+<!-- GitLab Stats -->
+## 📊 GitLab Stats
+<img src="https://raw.githubusercontent.com/Jorvict/Jorvict/main/dist/gitlab-stats.svg"/>
 
 <!--
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)](https://github-stats-extended.vercel.app/api/top-langs?username=Jorvict&hide_progress=true&langs_count=6&theme=material-palenight)
