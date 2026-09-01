@@ -25,37 +25,59 @@ function toDateStr(iso) {
   return iso.slice(0, 10);
 }
 
+function isWeekend(dateStr) {
+  const day = new Date(dateStr + 'T00:00:00Z').getUTCDay();
+  return day === 0 || day === 6; // domingo o sábado
+}
+
 function computeStats(events) {
   const dateSet = new Set(events.map(e => toDateStr(e.created_at)));
   const totalContributions = events.length;
   const totalActiveDays = dateSet.size;
 
-  const dates = Array.from(dateSet).sort();
-  let longest = 0, run = 0, prev = null;
-  for (const d of dates) {
-    if (prev) {
-      const diff = (new Date(d) - new Date(prev)) / 86400000;
-      run = diff === 1 ? run + 1 : 1;
-    } else {
-      run = 1;
+  const sortedDates = Array.from(dateSet).sort();
+  const firstDate = sortedDates.length ? sortedDates[0] : null;
+
+  // Racha más larga: solo cuenta días hábiles (lun-vie), los fines de semana no rompen la racha
+  let longest = 0, run = 0;
+  if (firstDate) {
+    let cursor = new Date(firstDate + 'T00:00:00Z');
+    const end = new Date();
+    end.setUTCHours(0, 0, 0, 0);
+    while (cursor <= end) {
+      const dStr = cursor.toISOString().slice(0, 10);
+      if (!isWeekend(dStr)) {
+        if (dateSet.has(dStr)) {
+          run++;
+          longest = Math.max(longest, run);
+        } else {
+          run = 0;
+        }
+      }
+      cursor.setUTCDate(cursor.getUTCDate() + 1);
     }
-    longest = Math.max(longest, run);
-    prev = d;
   }
 
-  const today = new Date().toISOString().slice(0, 10);
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  // Racha actual: camina hacia atrás desde hoy, saltando fines de semana
   let current = 0;
-  let cursor = dateSet.has(today) ? today : (dateSet.has(yesterday) ? yesterday : null);
-  if (cursor) {
-    let d = new Date(cursor);
-    while (dateSet.has(d.toISOString().slice(0, 10))) {
-      current++;
-      d = new Date(d.getTime() - 86400000);
+  {
+    let cursor = new Date();
+    cursor.setUTCHours(0, 0, 0, 0);
+    while (true) {
+      const dStr = cursor.toISOString().slice(0, 10);
+      if (isWeekend(dStr)) {
+        cursor.setUTCDate(cursor.getUTCDate() - 1);
+        continue;
+      }
+      if (dateSet.has(dStr)) {
+        current++;
+        cursor.setUTCDate(cursor.getUTCDate() - 1);
+      } else {
+        break;
+      }
     }
   }
 
-  const firstDate = dates.length ? dates[0] : null;
   return { totalContributions, totalActiveDays, longest, current, firstDate };
 }
 
@@ -68,44 +90,45 @@ function formatDateEs(iso) {
 function renderSVG(stats) {
   const startLabel = stats.firstDate ? formatDateEs(stats.firstDate) : '—';
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="180" viewBox="0 0 880 180">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="195" viewBox="0 0 880 195">
   <defs>
     <style>
       .bg { fill:#16171f; }
       .border { fill:none; stroke:#3a3d52; stroke-width:1.5; }
       .header { fill:#ff6b35; font: 700 20px 'Segoe UI', sans-serif; }
       .num { fill:#ffffff; font: 700 46px 'Segoe UI', sans-serif; }
-      .num-sm { fill:#ffffff; font: 700 30px 'Segoe UI', sans-serif; }
       .label { fill:#bf8fff; font: 700 15px 'Segoe UI', sans-serif; }
       .sub { fill:#9a9cb0; font: 400 12px 'Segoe UI', sans-serif; }
-      .streak-num { fill:#4dd8ff; font: 700 30px 'Segoe UI', sans-serif; }
+      .streak-num { fill:#4dd8ff; font: 700 26px 'Segoe UI', sans-serif; }
       .divider { stroke:#3a3d52; stroke-width:1; }
     </style>
   </defs>
 
-  <rect class="bg" width="880" height="180" rx="14"/>
+  <rect class="bg" width="880" height="195" rx="14"/>
 
   <text x="24" y="34" class="header">🦊 GitLab Stats</text>
   <line x1="0" y1="48" x2="880" y2="48" class="divider"/>
 
-  <rect class="border" x="16" y="64" width="848" height="102" rx="12"/>
+  <rect class="border" x="16" y="64" width="848" height="115" rx="12"/>
 
   <text x="150" y="112" class="num" text-anchor="middle">${stats.totalContributions}</text>
   <text x="150" y="138" class="label" text-anchor="middle">Contribuciones Totales</text>
   <text x="150" y="156" class="sub" text-anchor="middle">${startLabel} - Presente</text>
 
-  <line x1="317" y1="80" x2="317" y2="150" class="divider"/>
+  <line x1="317" y1="80" x2="317" y2="163" class="divider"/>
 
-  <circle cx="440" cy="106" r="34" fill="none" stroke="#bf8fff" stroke-width="4"/>
-  <text x="440" y="98" text-anchor="middle" font-size="18">🔥</text>
-  <text x="440" y="122" class="streak-num" text-anchor="middle">${stats.current}</text>
-  <text x="440" y="145" class="label" text-anchor="middle">Racha Actual</text>
+  <circle cx="440" cy="108" r="34" fill="none" stroke="#bf8fff" stroke-width="4"/>
+  <text x="440" y="100" text-anchor="middle" font-size="16">🔥</text>
+  <text x="440" y="126" class="streak-num" text-anchor="middle">${stats.current}</text>
+  <text x="440" y="158" class="label" text-anchor="middle">Racha Actual</text>
 
-  <line x1="563" y1="80" x2="563" y2="150" class="divider"/>
+  <line x1="563" y1="80" x2="563" y2="163" class="divider"/>
 
   <text x="700" y="112" class="num" text-anchor="middle">${stats.longest}</text>
   <text x="700" y="138" class="label" text-anchor="middle">Racha Más Larga</text>
   <text x="700" y="156" class="sub" text-anchor="middle">Máximo consecutivo</text>
+
+  <text x="24" y="185" class="sub">* Excluyendo dom, sáb</text>
 </svg>`;
 }
 
