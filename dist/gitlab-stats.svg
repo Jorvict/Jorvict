@@ -19,14 +19,14 @@
 
   <rect class="border" x="16" y="64" width="848" height="115" rx="12"/>
 
-  <text x="150" y="112" class="num" text-anchor="middle">222</text>
+  <text x="150" y="112" class="num" text-anchor="middle">223</text>
   <text x="150" y="138" class="label" text-anchor="middle">Contribuciones Totales</text>
   <text x="150" y="156" class="sub" text-anchor="middle">12 jun 2025 - Presente</text>
 
   <line x1="317" y1="80" x2="317" y2="163" class="divider"/>
 
   <circle cx="440" cy="108" r="34" fill="none" stroke="#bf8fff" stroke-width="4"/>
-  <text x="440" y="118" class="streak-num" text-anchor="middle">0</text>
+  <text x="440" y="118" class="streak-num" text-anchor="middle">5</text>
   <text x="415" y="150" text-anchor="middle" font-size="14">🔥</text>
   <text x="450" y="158" class="label" text-anchor="middle">Racha Actual</text>
 
