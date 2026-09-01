@@ -12,6 +12,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -21,6 +23,9 @@ jobs:
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: node scripts/gitlab-stats.js
+
+      - name: Sync with latest main before commit
+        run: git pull --rebase origin main
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
