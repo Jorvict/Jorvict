@@ -6,7 +6,7 @@ const TOKEN = process.env.GITLAB_TOKEN;
 async function fetchAllEvents() {
   let page = 1;
   let events = [];
-  while (page <= 20) { // tope de seguridad: ~2000 eventos
+  while (page <= 20) {
     const res = await fetch(`${GITLAB_URL}/api/v4/events?per_page=100&page=${page}`, {
       headers: { 'PRIVATE-TOKEN': TOKEN }
     });
@@ -22,7 +22,7 @@ async function fetchAllEvents() {
 }
 
 function toDateStr(iso) {
-  return iso.slice(0, 10); // YYYY-MM-DD en UTC
+  return iso.slice(0, 10);
 }
 
 function computeStats(events) {
@@ -55,27 +55,57 @@ function computeStats(events) {
     }
   }
 
-  return { totalContributions, totalActiveDays, longest, current };
+  const firstDate = dates.length ? dates[0] : null;
+  return { totalContributions, totalActiveDays, longest, current, firstDate };
+}
+
+function formatDateEs(iso) {
+  const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const d = new Date(iso);
+  return `${d.getUTCDate()} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
 function renderSVG(stats) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="495" height="150" viewBox="0 0 495 150">
-  <style>
-    .bg { fill:#0d1117; }
-    .title { fill:#fc6d26; font: 600 16px 'Segoe UI', sans-serif; }
-    .num { fill:#ffffff; font: 700 28px 'Segoe UI', sans-serif; }
-    .label { fill:#8b949e; font: 400 12px 'Segoe UI', sans-serif; }
-  </style>
-  <rect class="bg" width="495" height="150" rx="10"/>
-  <text x="20" y="30" class="title">GitLab Stats</text>
-  <text x="65" y="80" class="num" text-anchor="middle">${stats.totalContributions}</text>
-  <text x="65" y="100" class="label" text-anchor="middle">Total</text>
-  <text x="190" y="80" class="num" text-anchor="middle">${stats.current}</text>
-  <text x="190" y="100" class="label" text-anchor="middle">Current Streak</text>
-  <text x="330" y="80" class="num" text-anchor="middle">${stats.longest}</text>
-  <text x="330" y="100" class="label" text-anchor="middle">Longest Streak</text>
-  <text x="455" y="80" class="num" text-anchor="middle">${stats.totalActiveDays}</text>
-  <text x="455" y="100" class="label" text-anchor="middle">Active Days</text>
+  const startLabel = stats.firstDate ? formatDateEs(stats.firstDate) : '—';
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="180" viewBox="0 0 880 180">
+  <defs>
+    <style>
+      .bg { fill:#16171f; }
+      .border { fill:none; stroke:#3a3d52; stroke-width:1.5; }
+      .header { fill:#ff6b35; font: 700 20px 'Segoe UI', sans-serif; }
+      .num { fill:#ffffff; font: 700 46px 'Segoe UI', sans-serif; }
+      .num-sm { fill:#ffffff; font: 700 30px 'Segoe UI', sans-serif; }
+      .label { fill:#bf8fff; font: 700 15px 'Segoe UI', sans-serif; }
+      .sub { fill:#9a9cb0; font: 400 12px 'Segoe UI', sans-serif; }
+      .streak-num { fill:#4dd8ff; font: 700 30px 'Segoe UI', sans-serif; }
+      .divider { stroke:#3a3d52; stroke-width:1; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="880" height="180" rx="14"/>
+
+  <text x="24" y="34" class="header">🦊 GitLab Stats</text>
+  <line x1="0" y1="48" x2="880" y2="48" class="divider"/>
+
+  <rect class="border" x="16" y="64" width="848" height="102" rx="12"/>
+
+  <text x="150" y="112" class="num" text-anchor="middle">${stats.totalContributions}</text>
+  <text x="150" y="138" class="label" text-anchor="middle">Contribuciones Totales</text>
+  <text x="150" y="156" class="sub" text-anchor="middle">${startLabel} - Presente</text>
+
+  <line x1="317" y1="80" x2="317" y2="150" class="divider"/>
+
+  <circle cx="440" cy="106" r="34" fill="none" stroke="#bf8fff" stroke-width="4"/>
+  <text x="440" y="98" text-anchor="middle" font-size="18">🔥</text>
+  <text x="440" y="122" class="streak-num" text-anchor="middle">${stats.current}</text>
+  <text x="440" y="145" class="label" text-anchor="middle">Racha Actual</text>
+
+  <line x1="563" y1="80" x2="563" y2="150" class="divider"/>
+
+  <text x="700" y="112" class="num" text-anchor="middle">${stats.longest}</text>
+  <text x="700" y="138" class="label" text-anchor="middle">Racha Más Larga</text>
+  <text x="700" y="156" class="sub" text-anchor="middle">Máximo consecutivo</text>
 </svg>`;
 }
 
